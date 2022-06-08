@@ -2,11 +2,14 @@ package gestionSalarie;
 
  public class Employe extends Personne {
 
-    public Employe(String name, String surname, String ssNumber) {
+     int salary;
 
-        this.name = name ;
-        this.surname = surname ;
-        this.ssNumber = ssNumber ;
+     public Employe(String name, String surname, String ssNumber, Address address) {
 
-    }
+         setName(name);
+         setSurname(surname);
+         setSsNumber(ssNumber);
+         setAddress(address);
+     }
+
 }
