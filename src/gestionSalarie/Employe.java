@@ -1,8 +1,11 @@
 package gestionSalarie;
 
- public class Employe extends Personne {
+ public abstract class Employe extends Personne {
 
-     int salary;
+     int netSalaire;
+     public abstract String getMission();
+
+     //public abstract int calculerSalaireBrut();
 
      public Employe(String name, String surname, String ssNumber, Address address) {
 
@@ -11,5 +14,9 @@ package gestionSalarie;
          setSsNumber(ssNumber);
          setAddress(address);
      }
+
+     /*public int calulerSalaireNet() {
+
+     }*/
 
 }
