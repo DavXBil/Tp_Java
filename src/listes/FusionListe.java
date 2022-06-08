@@ -1,7 +1,6 @@
 package listes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class FusionListe {
@@ -18,17 +17,10 @@ public class FusionListe {
                 liste2.add("Bleu");
                 liste2.add("Orange");
 
-                Iterator<String> ite1 = liste1.iterator();
-                Iterator<String> ite2 = liste2.iterator();
-
                 List<String>liste3 = new ArrayList<String>();
 
-                while(ite1.hasNext()) {
-                        liste3.add(ite1.next());
-                }
-                while(ite2.hasNext()) {
-                        liste3.add(ite2.next());
-                }
+                liste3.addAll(liste1);
+                liste3.addAll(liste2);
 
                 System.out.println(liste3);
 
