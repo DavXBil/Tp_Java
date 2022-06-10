@@ -25,9 +25,21 @@ public class ManipulationFichier {
         for (String line: lines) {
             String[]value = line.split(";");
 
-            System.out.println(value[9]);
+            String noSpace= value[9].trim().replaceAll(" ", "");
 
-            newLines.add(value[9]);
+            long totalPopulation = -1;
+
+            try {
+                totalPopulation = Long.parseLong(noSpace);
+            } catch (NumberFormatException e) {
+
+            }
+
+            System.out.println(value[9]);
+            if(totalPopulation > 25000) {
+                newLines.add(line);
+
+            }
 
         }
 

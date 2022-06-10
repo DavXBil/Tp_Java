@@ -21,6 +21,11 @@ public class TestObjects {
 
         System.out.println(Collections.max(villes));
 
+        Ville paris = new Ville("Paris", 25000);
+        Ville brest = new Ville("Brest", 25000);
+
+        System.out.println(paris.equals(brest));
+
 
     }
 }
